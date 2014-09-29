@@ -10,10 +10,8 @@ import java.util.Map;
 Удалить из словаря всех людей, родившихся летом.
 */
 
-public class Solution
-{
-    public static HashMap<String, Date> createMap()
-    {
+public class Solution {
+    public static HashMap<String, Date> createMap() {
         HashMap<String, Date> map = new HashMap<String, Date>();
         map.put("Сталлоне", new Date("JUNE 1 1980"));
         map.put("Koko", new Date("JULY 21 1940"));
@@ -28,10 +26,9 @@ public class Solution
         return map;
     }
 
-    public static void removeAllSummerPeople(HashMap<String, Date> map)
-    {
+    public static void removeAllSummerPeople(HashMap<String, Date> map) {
         Iterator<Map.Entry<String, Date>> iterator = map.entrySet().iterator();
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             Map.Entry<String, Date> pair = iterator.next();
             Date date = pair.getValue();
             int month = date.getMonth();
@@ -41,10 +38,11 @@ public class Solution
         }
 
     }
+
     public static void main(String[] args) {
-        HashMap<String,Date> map = createMap();
+        HashMap<String, Date> map = createMap();
         removeAllSummerPeople(map);
-        for (Map.Entry<String, Date> entry : map.entrySet()){
+        for (Map.Entry<String, Date> entry : map.entrySet()) {
             System.out.println(entry.getKey() + " - " + entry.getValue().toString());
         }
     }

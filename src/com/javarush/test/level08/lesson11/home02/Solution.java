@@ -12,10 +12,8 @@ import java.util.Set;
 6. Реализовать метод printPets, котороый должен выводить на экран всех животных, которые в нем есть. Каждое животное с новой строки
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
         Set<Cat> cats = createCats();
         Set<Dog> dogs = createDogs();
 
@@ -26,8 +24,7 @@ public class Solution
         printPets(pets);
     }
 
-    public static Set<Cat> createCats()
-    {
+    public static Set<Cat> createCats() {
         HashSet<Cat> result = new HashSet<Cat>();
 
         result.add(new Cat());
@@ -38,8 +35,7 @@ public class Solution
         return result;
     }
 
-    public static Set<Dog> createDogs()
-    {
+    public static Set<Dog> createDogs() {
         HashSet<Dog> result = new HashSet<Dog>();
         result.add(new Dog());
         result.add(new Dog());
@@ -47,31 +43,28 @@ public class Solution
         return result;
     }
 
-    public static Set<Object> join(Set<Cat> cats, Set<Dog> dogs)
-    {
+    public static Set<Object> join(Set<Cat> cats, Set<Dog> dogs) {
         HashSet<Object> result = new HashSet<Object>();
         result.addAll(cats);
         result.addAll(dogs);
         return result;
     }
 
-    public static void removeCats(Set<Object> pets, Set<Cat> cats)
-    {
+    public static void removeCats(Set<Object> pets, Set<Cat> cats) {
         pets.removeAll(cats);
     }
 
-    public static void printPets(Set<Object> pets)
-    {
-        for (Object set : pets){
+    public static void printPets(Set<Object> pets) {
+        for (Object set : pets) {
             System.out.println(set);
         }
     }
 
-    public static class Cat{
+    public static class Cat {
 
     }
 
-    public static class Dog{
+    public static class Dog {
 
     }
 }

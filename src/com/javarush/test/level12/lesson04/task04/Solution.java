@@ -5,20 +5,20 @@ package com.javarush.test.level12.lesson04.task04;
 Каждый метод должен возвращать минимальное из двух переданных в него чисел.
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
 
     }
 
-    public int min(int a, int b){
+    public int min(int a, int b) {
         return a < b ? a : b;
     }
-    public long min(long a, long b){
+
+    public long min(long a, long b) {
         return a < b ? a : b;
     }
-    public double min(double a, double b){
+
+    public double min(double a, double b) {
         return a < b ? a : b;
     }
     //Напишите тут ваши методы

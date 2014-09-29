@@ -21,10 +21,8 @@ import java.util.ArrayList;
 лоза
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         BufferedReader bis = new BufferedReader(new InputStreamReader(System.in));
 
         ArrayList<String> list = new ArrayList<String>();
@@ -35,26 +33,22 @@ public class Solution
 
         list = fix(list);
 
-        for (String s : list)
-        {
+        for (String s : list) {
             System.out.println(s);
         }
     }
 
     public static ArrayList<String> fix(ArrayList<String> list) {
-        for (int i = 0; i < list.size();) {
-            if (list.get(i).indexOf("р")!=-1 && list.get(i).indexOf("л")!=-1){
+        for (int i = 0; i < list.size(); ) {
+            if (list.get(i).indexOf("р") != -1 && list.get(i).indexOf("л") != -1) {
                 i++;
-            }
-            else if (list.get(i).indexOf("р")!=-1){
+            } else if (list.get(i).indexOf("р") != -1) {
                 list.remove(i);
-            }
-            else if (list.get(i).indexOf("л")!=-1){
-                list.add(i,list.get(i));
+            } else if (list.get(i).indexOf("л") != -1) {
+                list.add(i, list.get(i));
                 i++;
                 i++;
-            }
-            else i++;
+            } else i++;
         }
         return list;
     }

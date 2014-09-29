@@ -7,8 +7,7 @@ package com.javarush.test.level05.lesson09.task01;
 - Имя, возраст, пол
 */
 
-public class Friend
-{
+public class Friend {
     public String name;
     public int age;
     public String gender;
@@ -19,8 +18,8 @@ public class Friend
         this.gender = gender;
     }
 
-    public Friend (String name){
-        this.name=name;
+    public Friend(String name) {
+        this.name = name;
 
     }
 

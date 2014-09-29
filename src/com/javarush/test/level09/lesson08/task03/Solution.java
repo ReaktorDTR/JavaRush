@@ -25,22 +25,19 @@ public class Solution {
     public static void main(String[] args) {
         try {
             processExceptions();
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             BEAN.log(e);
         }
 
     }
 
-    public static void processExceptions() throws FileSystemException{
+    public static void processExceptions() throws FileSystemException {
         try {
             BEAN.methodThrowExceptions();
-        }
-        catch (FileSystemException fe){
+        } catch (FileSystemException fe) {
             BEAN.log(fe);
             throw fe;
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             BEAN.log(e);
         }
     }

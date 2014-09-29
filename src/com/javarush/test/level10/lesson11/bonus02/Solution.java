@@ -24,10 +24,8 @@ import java.util.Map;
 1 Мыла
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws IOException
-    {
+public class Solution {
+    public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         Map<String, Integer> list = new HashMap<String, Integer>();
         while (true) {
@@ -38,7 +36,7 @@ public class Solution
             if (name.isEmpty()) break;
             list.put(name, id);
         }
-        for (Map.Entry<String,Integer> pair : list.entrySet()){
+        for (Map.Entry<String, Integer> pair : list.entrySet()) {
             System.out.println(pair.getValue() + " " + pair.getKey());
         }
     }

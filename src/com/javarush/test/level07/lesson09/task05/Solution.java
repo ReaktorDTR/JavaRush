@@ -10,8 +10,7 @@ import java.util.ArrayList;
 3. Используя цикл for выведи результат на экран, каждое значение с новой строки.
 */
 
-public class Solution
-{
+public class Solution {
     public static void main(String[] args) throws Exception {
         //read strings and init ArrayList list here - считать строки с консоли и объявить ArrayList list тут
         ArrayList<String> list = new ArrayList<String>();
@@ -27,8 +26,8 @@ public class Solution
     }
 
     public static ArrayList<String> doubleValues(ArrayList<String> list) {
-        for (int i = 0; i < list.size() ; i+=2) {
-            list.add(i,list.get(i));
+        for (int i = 0; i < list.size(); i += 2) {
+            list.add(i, list.get(i));
         }
         return list;
     }

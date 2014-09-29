@@ -4,15 +4,12 @@ package com.javarush.test.level12.lesson06.task01;
 Сделать класс Pet абстрактным.
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
 
     }
 
-    public abstract static class Pet
-    {
+    public abstract static class Pet {
         public abstract String getName();
     }
 

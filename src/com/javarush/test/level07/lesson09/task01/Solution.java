@@ -14,10 +14,8 @@ import java.util.List;
 3. Используя метод printList выведи эти три списка на экран. Сначала тот, который для x%3, потом тот, который для x%2, потом последний.
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         ArrayList<Integer> mas1 = new ArrayList<Integer>();
         ArrayList<Integer> mas2 = new ArrayList<Integer>();
         ArrayList<Integer> mas3 = new ArrayList<Integer>();
@@ -26,7 +24,7 @@ public class Solution
         for (int i = 0; i < 20; i++) {
             mas1.add(Integer.parseInt(reader.readLine()));
         }
-        for (int i = 0; i < mas1.size() ; i++) {
+        for (int i = 0; i < mas1.size(); i++) {
             if (mas1.get(i) % 3 == 0) {
                 mas2.add(mas1.get(i));
             }

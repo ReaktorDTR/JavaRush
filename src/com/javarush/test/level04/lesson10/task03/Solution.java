@@ -14,12 +14,10 @@ import java.io.InputStreamReader;
 абв
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String s=reader.readLine();
+        String s = reader.readLine();
         int c = Integer.parseInt(reader.readLine());
         int i = 0;
         while (i < c) {

@@ -14,7 +14,7 @@ import java.util.NoSuchElementException;
 public class Solution {
     public static void main(String[] args) {
 
-            processExceptions(new Solution());
+        processExceptions(new Solution());
     }
 
     public static void processExceptions(Solution obj) {
@@ -22,14 +22,11 @@ public class Solution {
             obj.method1();
             obj.method2();
             obj.method3();
-        }
-        catch (RemoteException e){
+        } catch (RemoteException e) {
             System.out.println(e);
-        }
-        catch (NoSuchFieldException e){
+        } catch (NoSuchFieldException e) {
             System.out.println(e);
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             System.out.println(e);
         }
     }

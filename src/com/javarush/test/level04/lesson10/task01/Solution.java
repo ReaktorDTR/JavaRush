@@ -7,12 +7,10 @@ import java.io.InputStreamReader;
 Вывести на экран числа от 1 до 10 используя цикл while.
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
-        int i=1;
-        while (i<=10) {
+public class Solution {
+    public static void main(String[] args) throws Exception {
+        int i = 1;
+        while (i <= 10) {
             System.out.println(i++);
         }
 

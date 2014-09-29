@@ -10,16 +10,14 @@ import java.io.InputStreamReader;
 4. Вывести результат на экран, каждое значение выводить с новой строки.
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         int[] a = new int[10];
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         for (int i = 9; i >= 0; i--) {
             a[i] = Integer.parseInt(reader.readLine());
         }
-        for (int i = 0; i < 10 ; i++) {
+        for (int i = 0; i < 10; i++) {
             System.out.println(a[i]);
         }
     }

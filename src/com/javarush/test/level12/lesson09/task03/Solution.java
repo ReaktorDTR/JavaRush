@@ -5,45 +5,36 @@ package com.javarush.test.level12.lesson09.task03;
 Добавь эти интерфейсы классам Dog(собака), Fish(рыба), Bird(птица), Airplane(самолет).
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
 
     }
 
-    public interface Fly
-    {
+    public interface Fly {
         public void fly();
     }
 
-    public interface Run
-    {
+    public interface Run {
         public void run();
     }
 
-    public interface Swim
-    {
+    public interface Swim {
         public void swim();
     }
 
-    public abstract class Dog implements Run, Swim
-    {
+    public abstract class Dog implements Run, Swim {
 
     }
 
-    public abstract class Fish implements Swim
-    {
+    public abstract class Fish implements Swim {
 
     }
 
-    public abstract class Bird implements Fly, Run, Swim
-    {
+    public abstract class Bird implements Fly, Run, Swim {
 
     }
 
-    public abstract class Airplane implements Fly, Run
-    {
+    public abstract class Airplane implements Fly, Run {
 
     }
 }

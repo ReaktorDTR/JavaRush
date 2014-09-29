@@ -7,8 +7,7 @@ package com.javarush.test.level05.lesson09.task04;
 - centerX, centerY, radius  width, color
 */
 
-public class Circle
-{
+public class Circle {
     public int centerX;
     public int centerY;
     public int radius;

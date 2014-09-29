@@ -7,11 +7,9 @@ package com.javarush.test.level05.lesson12.home01;
 Объекты класса Duck уже созданы и выводятся на экран.
 */
 
-public class Solution
-{
+public class Solution {
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         Duck duck1 = new Duck();
         Duck duck2 = new Duck();
         System.out.println(duck1);
@@ -28,22 +26,19 @@ public class Solution
         //Напишите тут ваш код
     }
 
-    public static class Duck
-    {
+    public static class Duck {
         public String toString() {
             return "Duck";
         }
     }
-    
-    public static class Cat
-    {
+
+    public static class Cat {
         public String toString() {
             return "Cat";
         }
     }
-    
-    public static class Dog
-    {
+
+    public static class Dog {
         public String toString() {
             return "Dog";
         }

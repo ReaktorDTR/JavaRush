@@ -16,14 +16,11 @@ import java.io.InputStreamReader;
 Четвертое минимальное – 6
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         int[] array = new int[30];
-        for (int i = 0; i < 30; i++)
-        {
+        for (int i = 0; i < 30; i++) {
             array[i] = Integer.parseInt(reader.readLine());
         }
 
@@ -33,14 +30,13 @@ public class Solution
         System.out.println(array[10]);
     }
 
-    public static void sort(int[] array)
-    {
+    public static void sort(int[] array) {
         for (int i = 0; i < array.length - 1; i++) {
             for (int j = 0; j < array.length - i - 1; j++) {
-                if (array[j] > array[j+1]) {
+                if (array[j] > array[j + 1]) {
                     int buff = array[j];
-                    array[j]=array[j+1];
-                    array[j+1]=buff;
+                    array[j] = array[j + 1];
+                    array[j + 1] = buff;
                 }
             }
 

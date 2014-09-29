@@ -8,10 +8,8 @@ import java.util.List;
 Для arrayList и linkedList провести 10 тысяч вставок, удалений, а также вызовов get и set.
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         // ArrayList
         ArrayList arrayList = new ArrayList();
         insert10000(arrayList);
@@ -27,31 +25,27 @@ public class Solution
         remove10000(linkedList);
     }
 
-    public static void insert10000(List list)
-    {
+    public static void insert10000(List list) {
         for (int i = 0; i < 10000; i++) {
-            list.add(0,"");
+            list.add(0, "");
         }
     }
 
-    public static void get10000(List list)
-    {
+    public static void get10000(List list) {
         for (int i = 0; i < 10000; i++) {
             list.get(i);
         }
 
     }
 
-    public static void set10000(List list)
-    {
+    public static void set10000(List list) {
         for (int i = 0; i < 10000; i++) {
-            list.set(i,"");
+            list.set(i, "");
         }
 
     }
 
-    public static void remove10000(List list)
-    {
+    public static void remove10000(List list) {
         for (int i = 0; i < 10000; i++) {
             list.remove(0);
         }

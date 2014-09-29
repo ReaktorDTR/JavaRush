@@ -17,16 +17,14 @@ import java.util.ArrayList;
   Мама     Мыла Раму.
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws IOException
-    {
+public class Solution {
+    public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String s = reader.readLine();
         ArrayList<String> list = new ArrayList<String>();
-        while (!s.isEmpty()){
-            list.add(s.substring(0,s.indexOf(" ")));
-            s=s.substring(s.indexOf(" "));
+        while (!s.isEmpty()) {
+            list.add(s.substring(0, s.indexOf(" ")));
+            s = s.substring(s.indexOf(" "));
         }
     }
 

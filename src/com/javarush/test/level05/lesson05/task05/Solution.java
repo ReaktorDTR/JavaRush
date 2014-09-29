@@ -9,13 +9,13 @@ package com.javarush.test.level05.lesson05.task05;
 
 public class Solution {
     public static void main(String[] args) {
-        boolean r1,r2,r3;
-        Cat cat1 = new Cat("vasya",2,5,10);
-        Cat cat2 = new Cat("borys",1,3,4);
-        Cat cat3 = new Cat("veteran",3,4,7);
-        r1=cat1.fight(cat2);
-        r2=cat2.fight(cat3);
-        r3=cat3.fight(cat1);
+        boolean r1, r2, r3;
+        Cat cat1 = new Cat("vasya", 2, 5, 10);
+        Cat cat2 = new Cat("borys", 1, 3, 4);
+        Cat cat3 = new Cat("veteran", 3, 4, 7);
+        r1 = cat1.fight(cat2);
+        r2 = cat2.fight(cat3);
+        r3 = cat3.fight(cat1);
         System.out.println(r1);
         System.out.println(r2);
         System.out.println(r3);

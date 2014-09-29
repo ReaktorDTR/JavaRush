@@ -9,10 +9,8 @@ package com.javarush.test.level07.lesson06.task01;
 
 import java.util.ArrayList;
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         ArrayList<String> list = new ArrayList<String>();
         list.add("1");
         list.add("2");

@@ -7,8 +7,7 @@ package com.javarush.test.level05.lesson09.task03;
 - Имя, рост, цвет
 */
 
-public class Dog
-{
+public class Dog {
     public String name;
     public int height;
     public String color;

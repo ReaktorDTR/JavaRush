@@ -5,19 +5,20 @@ package com.javarush.test.level12.lesson04.task05;
 Каждый метод должен возвращать максимальное из двух переданных в него чисел.
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
 
     }
-    public int max(int a, int b){
+
+    public int max(int a, int b) {
         return a > b ? a : b;
     }
-    public long max(long a, long b){
+
+    public long max(long a, long b) {
         return a > b ? a : b;
     }
-    public double max(double a, double b){
+
+    public double max(double a, double b) {
         return a > b ? a : b;
     }
     //Напишите тут ваши методы

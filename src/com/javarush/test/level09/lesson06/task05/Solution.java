@@ -9,16 +9,13 @@ map.put(null, null);
 map.remove(null);
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         try {
             HashMap<String, String> map = new HashMap<String, String>(null);
             map.put(null, null);
             map.remove(null);
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             System.out.println(e);
         }
 

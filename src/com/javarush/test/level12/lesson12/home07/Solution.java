@@ -5,40 +5,32 @@ package com.javarush.test.level12.lesson12.home07;
 Добавь эти интерфейсы классам Duck(утка), Penguin(пингвин), Toad(жаба)
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
 
     }
 
-    public interface Fly
-    {
+    public interface Fly {
         public void fly();
     }
 
-    public interface Run
-    {
+    public interface Run {
         public void run();
     }
 
-    public interface Swim
-    {
+    public interface Swim {
         public void swim();
     }
 
-    public abstract class Duck implements Fly, Run, Swim
-    {
+    public abstract class Duck implements Fly, Run, Swim {
 
     }
 
-    public abstract class Penguin implements Run, Swim
-    {
+    public abstract class Penguin implements Run, Swim {
 
     }
 
-    public abstract class Toad implements Swim
-    {
+    public abstract class Toad implements Swim {
 
     }
 }

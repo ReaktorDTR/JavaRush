@@ -7,26 +7,24 @@ package com.javarush.test.level05.lesson07.task01;
 - Имя, возраст, пол
 */
 
-public class Friend
-{
+public class Friend {
     public String name;
-    public int age=0;
+    public int age = 0;
     public String gender;
 
-    public void initialize(String name)
-    {
-        this.name=name;
+    public void initialize(String name) {
+        this.name = name;
     }
-    public void initialize(String name, int age)
-    {
-        this.name=name;
-        this.age=age;
+
+    public void initialize(String name, int age) {
+        this.name = name;
+        this.age = age;
     }
-    public void initialize(String name,int age, String gender)
-    {
-        this.name=name;
-        this.age=age;
-        this.gender=gender;
+
+    public void initialize(String name, int age, String gender) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
     }
 
 

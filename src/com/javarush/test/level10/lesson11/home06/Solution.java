@@ -4,15 +4,12 @@ package com.javarush.test.level10.lesson11.home06;
 Напиши класс Human с 6 полями. Придумай и реализуй 10 различных конструкторов для него. Каждый конструктор должен иметь смысл.
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
 
     }
 
-    public static class Human
-    {
+    public static class Human {
         public String name;
         public boolean sex;
         public int age;
@@ -101,7 +98,7 @@ public class Solution
             this.colorHair = colorHair;
         }
 
-        public Human (Human in){
+        public Human(Human in) {
             this.name = in.name;
             this.sex = in.sex;
             this.age = in.age;

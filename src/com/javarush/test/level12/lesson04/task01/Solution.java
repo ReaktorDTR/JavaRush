@@ -4,17 +4,16 @@ package com.javarush.test.level12.lesson04.task01;
 Написать два метода: print(int) и print(String).
 */
 
-public class Solution
-{
-    public static void main(String[] args)
-    {
+public class Solution {
+    public static void main(String[] args) {
 
     }
 
-    public void print (int a){
+    public void print(int a) {
 
     }
-    public void print (String a) {
+
+    public void print(String a) {
 
     }
 }

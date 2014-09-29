@@ -12,24 +12,18 @@ NullPointerException, ArithmeticException, FileNotFoundException, URISyntaxExcep
 ArithmeticException и URISyntaxException. Как это сделать?
 */
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         try {
             method1();
-        }
-        catch (NullPointerException e)
-        {
+        } catch (NullPointerException e) {
 
-        }
-        catch (FileNotFoundException e) {
+        } catch (FileNotFoundException e) {
 
         }
     }
 
-    public static void method1() throws NullPointerException, ArithmeticException, FileNotFoundException, URISyntaxException
-    {
+    public static void method1() throws NullPointerException, ArithmeticException, FileNotFoundException, URISyntaxException {
         int i = (int) (Math.random() * 4);
         if (i == 0)
             throw new NullPointerException();

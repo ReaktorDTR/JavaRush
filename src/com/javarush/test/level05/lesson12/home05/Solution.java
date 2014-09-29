@@ -7,16 +7,14 @@ package com.javarush.test.level05.lesson12.home05;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class Solution
-{
-    public static void main(String[] args) throws Exception
-    {
+public class Solution {
+    public static void main(String[] args) throws Exception {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String r;
-        int s=0;
+        int s = 0;
         do {
-            r=reader.readLine();
-            if (!r.equals("сумма")) s+=Integer.parseInt(r);
+            r = reader.readLine();
+            if (!r.equals("сумма")) s += Integer.parseInt(r);
         } while (!r.equals("сумма"));
         System.out.println(s);
     }
