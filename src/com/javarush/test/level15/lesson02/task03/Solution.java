@@ -32,6 +32,7 @@ public class Solution {
             System.out.println(Constants.WANT_STRING + Constants.LANOS_NAME);
         }
     }
+
     public static class LuxuriousCar {
         protected void printlnDesire() {
             System.out.println(Constants.WANT_STRING + Constants.LUXURIOUS_CAR);
@@ -51,6 +52,4 @@ public class Solution {
         public static String FERRARY_NAME = "Феррари";
         public static String LANOS_NAME = "Ланосе";
     }
-
-
 }
