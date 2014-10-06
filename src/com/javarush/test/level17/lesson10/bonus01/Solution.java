@@ -38,13 +38,14 @@ public class Solution {
     }
 
     public static void main(String[] args) throws Exception {
+        SimpleDateFormat dateFormat1 = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH);
+        SimpleDateFormat dateFormat2 = new SimpleDateFormat("dd-MMM-yyyy", Locale.ENGLISH);
         if (args.length < 2 || args.length > 5 || args.length == 3) return;
         if (args[0].equals("-c")) {
             Person person;
-            SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH);
-            if (args[2].equals("м")) person = Person.createMale(args[1], format.parse(args[3]));
+            if (args[2].equals("м")) person = Person.createMale(args[1], dateFormat1.parse(args[3]));
             else
-                person = Person.createFemale(args[1], format.parse(args[3]));
+                person = Person.createFemale(args[1], dateFormat1.parse(args[3]));
             allPeople.add(person);
             System.out.println(allPeople.indexOf(person));
         } else if (args[0].equals("-u")) {
@@ -54,8 +55,7 @@ public class Solution {
             if (args[3].equals("м")) person.setSex(Sex.MALE);
             else
                 person.setSex(Sex.FEMALE);
-            SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH);
-            person.setBirthDay(format.parse(args[4]));
+            person.setBirthDay(dateFormat1.parse(args[4]));
             allPeople.set(id, person);
         } else if (args[0].equals("-d")) {
             int id = Integer.parseInt(args[1]);
@@ -65,8 +65,7 @@ public class Solution {
             person.setBirthDay(null);
         } else if (args[0].equals("-i")) {
             Person person = allPeople.get(Integer.parseInt(args[1]));
-            SimpleDateFormat format = new SimpleDateFormat("dd-MMM-yyyy", Locale.ENGLISH);
-            String date = format.format(person.getBirthDay());
+            String date = dateFormat2.format(person.getBirthDay());
             System.out.println(person.getName() + " " + convert(person.getSex()) + " " + date);
         }
     }
