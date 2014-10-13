@@ -22,10 +22,50 @@ id productName price quantity
 19847983Куртка для сноубордистов, разм10173.991234
 */
 
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class Solution {
     public static void main(String[] args) throws Exception {
-
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String filename = reader.readLine();
+        comParser(filename, args);
     }
 
+    public static void comParser(String fileName, String[] commands) throws IOException {
+        if (commands[0].equals("-c")) {
+            int currentID = getMaxIdFromFile(fileName);
+            PrintWriter printWriter = new PrintWriter(new BufferedWriter(new FileWriter(fileName, true)));
+            StringBuilder fullParam = new StringBuilder();
+            fullParam.append(fullString(String.valueOf(++currentID), 8));
+            fullParam.append(fullString(commands[1], 30));
+            fullParam.append(fullString(commands[2], 8));
+            fullParam.append(fullString(commands[3], 4));
+            printWriter.println(fullParam);
+            printWriter.close();
+        }
+    }
 
+    public static String fullString(String inString, int count) {
+        int lostSpaces = count - inString.length();
+        String fullStr = inString;
+        if (lostSpaces < count) {
+            for (int i = 0; i < lostSpaces; i++) {
+                fullStr += " ";
+            }
+        } else fullStr = inString.substring(0, count);
+        return fullStr;
+    }
+
+    public static int getMaxIdFromFile(String fileName) throws IOException {
+        ArrayList<Integer> idList = new ArrayList<>();
+        BufferedReader reader = new BufferedReader(new FileReader(fileName));
+        String buffer;
+        while ((buffer = reader.readLine()) != null) {
+            idList.add(Integer.parseInt(buffer.substring(0, 8).replace(" ", "")));
+        }
+        reader.close();
+        return Collections.max(idList);
+    }
 }
