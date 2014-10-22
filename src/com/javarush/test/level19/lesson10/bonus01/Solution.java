@@ -1,9 +1,9 @@
 package com.javarush.test.level19.lesson10.bonus01;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,19 +34,29 @@ public class Solution {
     public static List<LineItem> lines = new ArrayList<LineItem>();
 
     public static void main(String[] args) throws IOException {
-        List<String> fileOne = readFromFile("c:\\test.txt");
-        List<String> fileTwo = readFromFile("c:\\test2.txt");
-        for (int i = 0; i < fileOne.size(); i++) {
-
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        List<String> fileOne = readFromFile(reader.readLine());
+        List<String> fileTwo = readFromFile(reader.readLine());
+        reader.close();
+        while (!fileOne.isEmpty()) {
+            String str = fileOne.get(0);
+            if (fileTwo.contains(str)) {
+                while (fileTwo.indexOf(str) != 0) {
+                    lines.add(new LineItem(Type.ADDED, fileTwo.get(0)));
+                    fileTwo.remove(0);
+                }
+                lines.add(new LineItem(Type.SAME, str));
+                fileOne.remove(0);
+                fileTwo.remove(0);
+            } else {
+                lines.add(new LineItem(Type.REMOVED, str));
+                fileOne.remove(0);
+            }
         }
-
-//        for (String element : fileOne) {
-//            if (fileTwo.contains(element)) {
-//                lines.add(new LineItem(Type.SAME, element));
-//            } else if (!fileTwo.contains(element)) {
-//                lines.add(new LineItem(Type.REMOVED, element));
-//            }
-//        }
+        while (!fileTwo.isEmpty()) {
+            lines.add(new LineItem(Type.ADDED, fileTwo.get(0)));
+            fileTwo.remove(0);
+        }
     }
 
     public static enum Type {
