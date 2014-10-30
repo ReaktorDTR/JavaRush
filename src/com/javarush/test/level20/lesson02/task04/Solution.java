@@ -13,9 +13,8 @@ public class Solution {
         //вы можете найти your_file_name.tmp в папке TMP или исправьте outputStream/inputStream в соответствии с путем к вашему реальному файлу
         try {
 
-            File your_file_name = File.createTempFile("your_file_name", null);
-            OutputStream outputStream = new FileOutputStream(your_file_name);
-            InputStream inputStream = new FileInputStream(your_file_name);
+            OutputStream outputStream = new FileOutputStream("C:\\test.txt");
+            InputStream inputStream = new FileInputStream("C:\\test.txt");
 
             ClassWithStatic classWithStatic = new ClassWithStatic();
             classWithStatic.i = 3;
@@ -49,11 +48,27 @@ public class Solution {
         public int j;
 
         public void save(OutputStream outputStream) throws Exception {
-            //implement this method - реализуйте этот метод
+            PrintWriter writer = new PrintWriter(outputStream);
+            StringBuilder sb = new StringBuilder();
+            sb.append(staticString);
+            sb.append(",");
+            sb.append(i);
+            sb.append(",");
+            sb.append(j);
+            writer.println(sb.toString());
+            writer.flush();
+            writer.close();
         }
 
         public void load(InputStream inputStream) throws Exception {
-            //implement this method - реализуйте этот метод
+            BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+            if (reader.ready()) {
+                String[] param = reader.readLine().split(",");
+                staticString = param[0];
+                i = Integer.parseInt(param[1]);
+                j = Integer.parseInt(param[2]);
+            }
+            reader.close();
         }
     }
 }
