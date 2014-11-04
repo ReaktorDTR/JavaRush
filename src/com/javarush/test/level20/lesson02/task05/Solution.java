@@ -9,7 +9,7 @@ import java.io.*;
 Метод main реализован только для вас и не участвует в тестировании
 */
 public class Solution {
-    public static void main(String[] args) {
+    public static void main(java.lang.String[] args) {
         //you can find your_file_name.tmp in your TMP directory or fix outputStream/inputStream according to your real file location
         //вы можете найти your_file_name.tmp в папке TMP или исправьте outputStream/inputStream в соответствии с путем к вашему реальному файлу
         try {
@@ -48,19 +48,24 @@ public class Solution {
         public String string2;
 
         public void save(OutputStream outputStream) throws Exception {
-            PrintWriter writer = new PrintWriter(outputStream);
-            StringBuilder sb = new StringBuilder();
-            sb.append(string1);
-            sb.append(",");
-            sb.append(string2);
-            sb.append(",");
-            sb.append(countStrings);
-            writer.println(sb.toString());
-            writer.close();
+            PrintStream printStream = new PrintStream(outputStream, true);
+            PrintStream pr = System.out;
+            System.setOut(printStream);
+            string1.print();
+            string2.print();
+            System.setOut(pr);
+            printStream.close();
         }
 
         public void load(InputStream inputStream) throws Exception {
-            //implement this method - реализуйте этот метод
+            BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+            int temp = countStrings;
+            countStrings = Integer.parseInt(reader.readLine().split("#")[1]) - 1;
+            this.string1 = new String();
+            countStrings = Integer.parseInt(reader.readLine().split("#")[1]) - 1;
+            this.string2 = new String();
+            countStrings = temp;
+            reader.close();
         }
     }
 
