@@ -1,6 +1,6 @@
 package com.javarush.test.level20.lesson10.home03;
 
-import java.io.*;
+import java.io.Serializable;
 
 /* Найти ошибки
 Почему-то при сериализации/десериализации объекта класса B возникают ошибки.
@@ -8,14 +8,9 @@ import java.io.*;
 Класс A не должен реализовывать интерфейсы Serializable и Externalizable.
 Сигнатура класса В не содержит ошибку :)
 */
-public class Solution implements Serializable {
-
+public class Solution {
     public static class A {
         protected String name = "A";
-
-        public A() {
-
-        }
 
         public A(String name) {
             this.name += name;
